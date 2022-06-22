@@ -4,5 +4,5 @@ function loadEvent() {
     console.log('loaded');  
 }
 
-window.addEventListener()
+window.addEventListener('click',loadEvent)
 
