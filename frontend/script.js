@@ -33,32 +33,39 @@ const arr = [
     //console.dir(document.querySelector('#root'))
     
     //rootElement.innerHTML+='Ciao'
-async function loadEvent() {
+
+    function countryComponent(country) { 
+        console.log(country)
+        return`
+        <div class="country">
+            ${country.name.common}
+        </div>
+        
+        `
+    }
+
+    async function loadEvent() {
 
     let rootElement=document.getElementById('root');
 
-    rootElement.insertAdjacentHTML('beforeend',`
+    /*rootElement.insertAdjacentHTML('beforeend',countryComponent()`
         <h1>${arr}</h1>
-    `);
+    `);*/
 
-    for (let index = 5; index <= 10; index++) {
-        console.log('the current value of index is: ', index);
-        rootElement.insertAdjacentHTML('beforeend',`
-        <h1>${index}</h1>
-    `);
+    //for (let index = 5; index <= 10; index++) {
+      //  console.log('the current value of index is: ', index);
+        /*rootElement.insertAdjacentHTML('beforeend',countryComponent());
         
     }
-
+*/
     const countries = await fetch('https://restcountries.com/v3.1/all');
-    console.log(countries);
+    //console.log(countries);
     const countriesJson =  await countries.json();
-    console.log(countriesJson);
+    //console.log(countriesJson);
     
     for (let index = 0; index < 10; index++) {
-        console.log(countriesJson[index].name.common);
-        //rootElement.insertAdjacentHTML('beforeend',`
-        //<h1>${index}</h1>
-    //`);
+        //console.log(countriesJson[index].name.common);
+        rootElement.insertAdjacentHTML('beforeend',countryComponent(countriesJson[index]));
     }
 }
 
