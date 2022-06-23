@@ -3,17 +3,38 @@ console.log('hello világ');
 function loadEvent() {
     console.log('loaded');  
 
-let rootElement=document.getElementById('root')
+    let rootElement=document.getElementById('root')
+}
 
-   rootElement.innerHTML='Sziasztok!'
+console.log(x);
+
+x = "megváltoztam"
+
+ console.log(x) 
+
+const obj = {
+    "kulcs":"ertek",
+    kulcs2 : 132,
+    boolivan : true,
+    kulcs4: "123"
+}
+const arr = [
+    'string',
+    123,
+    true,
+    '234'
+
+]
+   //rootElement.innerHTML='Sziasztok!'
     //console.dir(document.getElementById('root'))
     //console.dir(document.querySelector('#root'))
     
-    rootElement.innerHTML+='Ciao'
+    //rootElement.innerHTML+='Ciao'
+function loadEvent() {
 
-rootElement.insertAdjacentElementHTML('beforeend', 
-<h1>This is the title</h1>)
+    let rootElement.insertAdjacentHTML('root');
+    rootElement.insertAdjacentHTML('beforeend',`
+    <h1>${arr}</h1>
+    `);
 }
-
-window.addEventListener('load',loadEvent)
-
+window.addEventListener('load',loadEvent);
