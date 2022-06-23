@@ -1,23 +1,21 @@
 console.log('hello világ');
 
-function loadEvent() {
-    console.log('loaded');  
-
-    let rootElement=document.getElementById('root')
-}
+let x ='változó vagyok'
 
 console.log(x);
 
-x = "megváltoztam"
+x = "megváltoztam";
 
- console.log(x) 
+ console.log(x); 
 
 const obj = {
     "kulcs":"ertek",
     kulcs2 : 132,
     boolivan : true,
-    kulcs4: "123"
+    kulcs4: "123",
+    tomb: ['lara croft', 'indiana jones']
 }
+
 const arr = [
     'string',
     123,
@@ -32,9 +30,10 @@ const arr = [
     //rootElement.innerHTML+='Ciao'
 function loadEvent() {
 
-    let rootElement.insertAdjacentHTML('root');
+    let rootElement=document.getElementById('root');
+
     rootElement.insertAdjacentHTML('beforeend',`
-    <h1>${arr}</h1>
+        <h1>${arr}</h1>
     `);
 }
 window.addEventListener('load',loadEvent);
