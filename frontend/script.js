@@ -13,7 +13,12 @@ const obj = {
     kulcs2 : 132,
     boolivan : true,
     kulcs4: "123",
-    tomb: ['lara croft', 'indiana jones']
+    tomb: ['lara croft', 'indiana jones'],
+    obivan: { 
+        key1: 'word',
+        key2: 951,
+        key3: ['luke', 'vegtelen']
+    }
 }
 
 const arr = [
@@ -28,12 +33,33 @@ const arr = [
     //console.dir(document.querySelector('#root'))
     
     //rootElement.innerHTML+='Ciao'
-function loadEvent() {
+async function loadEvent() {
 
     let rootElement=document.getElementById('root');
 
     rootElement.insertAdjacentHTML('beforeend',`
         <h1>${arr}</h1>
     `);
+
+    for (let index = 5; index <= 10; index++) {
+        console.log('the current value of index is: ', index);
+        rootElement.insertAdjacentHTML('beforeend',`
+        <h1>${index}</h1>
+    `);
+        
+    }
+
+    const countries = await fetch('https://restcountries.com/v3.1/all');
+    console.log(countries);
+    const countriesJson =  await countries.json();
+    console.log(countriesJson);
+    
+    for (let index = 0; index < 10; index++) {
+        console.log(countriesJson[index].name.common);
+        //rootElement.insertAdjacentHTML('beforeend',`
+        //<h1>${index}</h1>
+    //`);
+    }
 }
+
 window.addEventListener('load',loadEvent);
