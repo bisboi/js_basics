@@ -1,0 +1,28 @@
+body {
+    background-color: blueviolet;
+
+}
+
+
+.country {
+    
+    background-color: cornsilk;
+    height: 150px;
+    width:150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+ 
+}
+
+#root {
+    background-color: coral;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 500px;
+    
+}
